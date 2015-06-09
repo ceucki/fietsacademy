@@ -21,6 +21,19 @@ Docent niet gevonden
 	<c:if test='${not empty docent}'>
 ${docent.naam}, wedde: &euro; <fmt:formatNumber value='${docent.wedde}' />
 ${docent.geslacht == 'MAN' ? '&#x2642;' : '&#x2640;'}
+<c:url value='/docenten/opslag.htm' var='opslagURL'>
+			<c:param name='id' value='${docent.id}' />
+		</c:url>
+		<a href='${opslagURL}' class='knop'><input type="button"
+			value='Opslag'></a>
 	</c:if>
+
+	<h2>Acties</h2>
+	<c:url value='/docenten/verwijderen.htm' var='verwijderURL'>
+		<c:param name='id' value='${docent.id}' />
+	</c:url>
+	<form action='${verwijderURL}' method='post'>
+		<input type='submit' value='Verwijderen'>
+	</form>
 </body>
 </html>
