@@ -133,5 +133,7 @@ public class Docent implements Serializable {
 				BigDecimal.ONE.add(percentage.divide(BigDecimal.valueOf(100)));
 				wedde = wedde.multiply(factor).setScale(2, RoundingMode.HALF_UP);
 	}
+	
+	
 
 }
