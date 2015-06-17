@@ -22,7 +22,7 @@ import be.vdab.services.DocentService;
 public class VanTotWeddeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String VIEW = "/WEB-INF/JSP/docenten/vantotwedde.jsp";
-	private final DocentService docentService = new DocentService();
+	private final transient DocentService docentService = new DocentService();
 	private static final int AANTAL_RIJEN = 20;
 
 	/**
